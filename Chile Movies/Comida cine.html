@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile Movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Incluyendo Bootstrap -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #successMessage {
+            position: fixed; /* Hace que el mensaje esté en una posición fija */
+            top: 50%; /* Centra verticalmente */
+            left: 50%; /* Centra horizontalmente */
+            transform: translate(-50%, -50%); /* Ajusta la posición para que esté perfectamente centrado */
+            z-index: 1050; /* Asegura que esté por encima de otros elementos */
+            display: none; /* Inicialmente oculto */
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <h1>Chile Movies - Comida</h1>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Inicio de Sesion.html">Inicio de Sesion</a></li>
+                <li><a href="Cartelera.html">Cartelera</a></li>
+                <li><a href="Comida cine.html">Comida</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <h2>Menú</h2>
+        <div class="row">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="imagenes/pizza.avif" class="card-img-top" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">Disfruta de nuestra deliciosa pizza con ingredientes frescos y una masa crujiente.</p>
+                        <button class="btn btn-primary comprar-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="imagenes/hamburguesa.avif" class="card-img-top" alt="Hamburguesa">
+                    <div class="card-body">
+                        <h5 class="card-title">Hamburguesa</h5>
+                        <p class="card-text">Prueba nuestra hamburguesa jugosa, preparada al instante con los mejores ingredientes.</p>
+                        <button class="btn btn-primary comprar-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="imagenes/bebida.jpg" class="card-img-top" alt="Sushi">
+                    <div class="card-body">
+                        <h5 class="card-title">Bebida</h5>
+                        <p class="card-text">Refresca tu experiencia cinematográfica con una de nuestras bebidas frías. Desde refrescos burbujeantes hasta jugos, ¡tienes que probarlas todas!</p>
+                        <button class="btn btn-primary comprar-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="imagenes/palomitas.avif" class="card-img-top" alt="Tacos">
+                    <div class="card-body">
+                        <h5 class="card-title">Palomitas</h5>
+                        <p class="card-text">Las palomitas son el snack icónico del cine. Suaves y esponjosas, son ideales para compartir o disfrutar mientras vives la emoción de la película. ¡No te quedes sin las tuyas!</p>
+                        <button class="btn btn-primary comprar-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="imagenes/papas.jpg" class="card-img-top" alt="Postre">
+                    <div class="card-body">
+                        <h5 class="card-title">Papas Fritas</h5>
+                        <p class="card-text">Crujientes y doradas, nuestras papas fritas son el acompañamiento perfecto para disfrutar mientras miras tu película favorita. ¡No te resistas a este clásico del cine!</p>
+                        <button class="btn btn-primary comprar-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventana emergente para ingresar datos -->
+        <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="purchaseModalLabel">Detalles de Compra</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="purchaseForm">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje de compra exitosa -->
+        <div id="successMessage" class="alert alert-success" role="alert">
+            Compra exitosa
+        </div>
+    </main>
+    
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.comprar-btn').click(function() {
+                $('#purchaseModal').modal('show'); // Muestra la ventana emergente
+            });
+
+            $('#purchaseForm').submit(function(event) {
+                event.preventDefault(); // Previene el envío del formulario
+
+                $('#purchaseModal').modal('hide'); // Cierra la ventana emergente
+                $('#successMessage').show(); // Muestra el mensaje de compra exitosa
+                setTimeout(function() {
+                    $('#successMessage').hide(); // Oculta el mensaje después de 1 segundo
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

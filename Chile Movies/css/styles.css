@@ -1,0 +1,115 @@
+/* Estilos comunes para todas las páginas */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6c757d; 
+}
+
+
+header {
+    background-color: #6c757d; /* Color de fondo gris oscuro */
+    color: #fff; /* Establece el color del texto en blanco */
+    padding: 20px; /* Agrega espacio interno */
+    text-align: center; /* Centra el texto */
+}
+
+header h1 {
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin-right: 20px; /* Agrega espacio a la derecha de cada elemento */
+}
+
+nav ul li a {
+    color: #fff; /* Establece el color del texto en blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+}
+
+main {
+    padding: 20px; /* Agrega espacio interno */
+}
+
+footer {
+    background-color: #f9f9f9; /* Establece el color de fondo gris claro */
+    padding: 20px; /* Agrega espacio interno */
+    text-align: center; /* Centra el texto */
+    position: fixed; /* Fija el pie de página en la parte inferior */
+    bottom: 0; /* Coloca el pie de página en la parte inferior */
+    width: 100%; /* Establece el ancho del pie de página al 100% */
+}
+
+/* Estilos para el formulario de postulación */
+
+#formulario {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario */
+    padding: 20px; /* Espacio interno */
+    background-color: #f9f9f9; /* Color de fondo del formulario */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#formulario h2 {
+    margin-bottom: 20px; /* Espacio inferior */
+    text-align: center; /* Centra el texto */
+    color: #333; /* Color del texto */
+}
+
+#formulario label {
+    display: block; /* Elimina el bloque de la etiqueta */
+    margin-bottom: 5px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+    color: #555; /* Color del texto */
+}
+
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="number"],
+#formulario select,
+#formulario textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 15px; /* Espacio inferior */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+#formulario button {
+    display: block; /* Botón en bloque */
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espacio interno */
+    background-color: #6c757d; /* Color de fondo gris oscuro */
+    color: #fff; /* Color del texto en blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+#formulario button:hover {
+    background-color: #5a6268; /* Color de fondo gris más oscuro al pasar el ratón */
+}
+
+#carta {
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura fija */
+    margin-top: 20px; /* Espacio superior */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Esquinas redondeadas */
+    resize: none; /* Sin redimensionamiento */
+}

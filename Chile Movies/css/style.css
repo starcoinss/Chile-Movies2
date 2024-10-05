@@ -1,0 +1,87 @@
+/* Estilos comunes para todas las páginas */
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente principal */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+header {
+    background-color: #007bff; /* Establece el color de fondo azul */
+    color: #fff; /* Establece el color del texto en blanco */
+    padding: 20px; /* Agrega espacio interno */
+    text-align: center; /* Centra el texto */
+}
+
+header h1 {
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin-right: 20px; /* Agrega espacio a la derecha de cada elemento */
+}
+
+nav ul li a {
+    color: #fff; /* Establece el color del texto en blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+}
+
+main {
+    padding: 20px; /* Agrega espacio interno */
+}
+
+footer {
+    background-color: #f9f9f9; /* Establece el color de fondo gris claro */
+    padding: 20px; /* Agrega espacio interno */
+    text-align: center; /* Centra el texto */
+    position: fixed; /* Fija el pie de página en la parte inferior */
+    bottom: 0; /* Coloca el pie de página en la parte inferior */
+    width: 100%; /* Establece el ancho del pie de página al 100% */
+}
+
+/* Estilos específicos para la página de Inicio y Quienes Somos */
+
+#inicio,
+#quienes-somos {
+    max-width: 800px; /* Establece el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Agrega espacio interno */
+    background-color: #f9f9f9; /* Establece el color de fondo gris claro */
+    border-radius: 5px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+}
+
+#inicio h2,
+#quienes-somos h2 {
+    margin-bottom: 20px; /* Agrega espacio inferior */
+    text-align: center; /* Centra el texto */
+    color: #333; /* Establece el color del texto */
+}
+
+#inicio p,
+#quienes-somos p {
+    line-height: 1.6; /* Ajusta la altura de la línea para mejorar la legibilidad */
+    color: #555; /* Establece el color del texto */
+}
+
+/* Estilos para el carrusel */
+#carouselExampleIndicators {
+    height: 100vh; /* Establece la altura del carrusel para cubrir toda la altura de la ventana */
+}
+
+/* Estilos para las imágenes del carrusel */
+.carousel-item img {
+    width: 100%; /* Ajusta el ancho de la imagen para que ocupe todo el ancho del carrusel */
+    height: 100%; /* Ajusta la altura de la imagen para que ocupe toda la altura del carrusel */
+    object-fit: cover; /* Ajusta la imagen para llenar el espacio sin deformarla */
+}
